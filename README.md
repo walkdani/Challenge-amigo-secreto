@@ -28,9 +28,6 @@ Después de clonar el repositorio, abre el archivo `index.html` en tu navegador 
 4. **Ver resultados**: Los resultados del sorteo se muestran en pantalla.
 5. **Resetear**: Si deseas comenzar de nuevo, haz clic en el botón **Reset** para limpiar la lista y el sorteo.
 
-## Capturas de pantalla 📸
-![Texto alternativo](assets/SS.png)
-
 ## Contribuciones 🤝
 Las contribuciones son siempre bienvenidas. Si encuentras algún error o tienes ideas para mejorar el proyecto, puedes hacer lo siguiente:
 - **Crear un issue** para reportar un error o sugerir una mejora.
