@@ -1,0 +1,205 @@
+/* Paleta de colores */
+:root {
+    --color-primary: #c156a6;
+    --color-secondary: #ECF0F1;
+    --color-tertiary: #BDC3C7;
+    --color-button: #1ABC9C;
+    --color-button-hover: #16A085;
+    --color-text: #34495E;
+    --color-white: #FFFFFF;
+    --color-shadow: #000000;
+    --color-border: var(--color-tertiary);
+}
+
+
+/* Reseteo de estilos y box-sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos generales */
+body {
+    font-family: "Inter", sans-serif;
+    animation: rainbow 10s linear infinite;
+    color: var(--color-text);
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 1.6;
+    background-size: 300% 500%;
+    /* Fondo degradado animado */ 
+    background-image: linear-gradient(2deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #8B00FF, #FF0000);
+
+}
+
+/* Contenedor principal */
+.main-content {
+    animation: rainbow 10s linear infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    max-width: 75rem;
+    margin: 1.25rem;
+    padding: 2.5rem;
+    background-color: var(--color-shadow);
+    border-radius: 0.625rem;
+    box-shadow: 0 0.5rem 1.25rem var(--color-shadow);
+}
+
+/* Títulos con sombra y tamaño adaptable */
+.main-title {
+    font-size: 8vw; /* Tamaño dinámico basado en el ancho de la ventana */
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    color: var(--color-shadow);
+    margin-bottom: 1.25rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Sombra de texto en negro */
+}
+
+/*texto secundario*/
+.list-title {
+    font-size: 1rem;
+    font-family: "Merriweather", serif;
+    font-weight: 600;
+    color: var(--color-shadow);
+   
+}
+
+
+/* Input Section */
+.input-section {
+    background-color: var(--color-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.625rem;
+    padding: 1.875rem;
+    box-shadow: 0 0.375rem 0.75rem var(--color-shadow);
+    width: 100%;
+    color = --color-white;
+    
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 0.625rem;
+}
+
+.input-name, .input-title {
+    width: 75%;
+    padding: 0.75rem;
+    border: 0.125rem solid var(--color-border);
+    border-radius: 1.25rem;
+    font-size: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0.125rem 0.5rem var(--color-shadow);
+    transition: all 0.3s ease;
+}
+
+.input-name:focus, .input-title:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
+/* Asegurar que la imagen del encabezado se ajuste bien */
+.header-img {
+    width: 100%;
+    max-width: 300px; /* Limitar el tamaño máximo */
+    height: auto;
+}
+
+/* Ocultar el texto en los botones en pantallas pequeñas y mostrar solo el ícono */
+.button-text {
+    display: inline-block;
+}
+
+.button-add {
+    padding: 0.75rem 1.25rem;
+    background-color: var(--color-button);
+    color: var(--color-white);
+    border-radius: 1.25rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-add:hover {
+    background-color: var(--color-button-hover);
+}
+.button-container {
+    padding: 0.75rem 1.25rem;
+    background-color: var(--color-button);
+    color: var(--color-white);
+    border-radius: 1.25rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex-wrap: wrap; /* Permitir que los botones se apilen en pantallas pequeñas */
+}
+
+.button-container:hover {
+    background-color: var(--color-button-hover);
+}
+/* Botón Sortear */
+.button-draw {
+    background-color: var(--color-button); /* Color de fondo inicial */
+    color: var(--color-white); /* Color del texto */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Indicador de puntero al pasar por encima */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; /* Espacio entre el ícono y el texto */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+/* Hover para el botón Sortear */
+.button-draw:hover {
+    background-color: var(--color-button-hover); /* Cambiar el color de fondo al pasar el mouse */
+}
+/* Estilos para la imagen (ícono dentro del botón) */
+.button-draw img {
+    width: 25px; /* Tamaño del ícono */
+    height: 25px;
+}
+
+/* Estilos generales para el botón RESET */
+.button-reset {
+    padding: 0.75rem 2rem; /* Ajuste de tamaño para hacerlo más grande */
+    background-color: #E74C3C; /* Color de fondo rojo */
+    color: var(--color-white); /* Texto blanco */
+    position: absolute;
+    bottom: 1rem; /* Ubicación en la parte inferior */
+    right: 1rem; /* Ubicación en la parte derecha */
+    border-radius: 1.25rem; /* Bordes redondeados */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Puntero para mostrar interacción */
+    font-size: 1.2rem; /* Aumento del tamaño de fuente */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave de color y animación de escala */
+}
+
+/* Efecto hover */
+.button-reset:hover {
+    background-color: #C0392B; /* Rojo más oscuro en hover */
+    transform: scale(1.05); /* Efecto de escalado al hacer hover */
+}
+
+/* Efecto focus */
+.button-reset:focus {
+    outline: 2px solid #C0392B; /* Outline de color rojo oscuro */
+}
+
+
